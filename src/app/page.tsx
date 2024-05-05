@@ -328,7 +328,7 @@ export default function Home() {
           <CardHeader>
             <CardTitle>Gasto por mês</CardTitle>
             <div className="flex items-center gap-2 w-full justify-between">
-              <CardDescription>O gráfico mostra o valor gasto atual comparado com o ano passado</CardDescription>
+              <CardDescription>O gráfico mostra o valor do gasto atual comparado com o ano passado</CardDescription>
               <div>
                 <p className="text-muted-foreground">Gasto total do ano atual: {valorTotalAnoAtual.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
                 <p className="text-muted-foreground">Gasto total do ano passado: {valorTotalAnoPassado.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
