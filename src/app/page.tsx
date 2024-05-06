@@ -304,7 +304,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{varianciaAnoAtual.toFixed(2)}</div>
-              <p className="text-xs text-muted-foreground">{varianciaAnoPassado.toFixed(2)} from last month</p>
+              <p className="text-xs text-muted-foreground">{varianciaAnoPassado.toFixed(2)} ano de 2017</p>
             </CardContent>
           </Card>
 
@@ -315,7 +315,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{desvioPadraoAnoAtual.toFixed(2)}</div>
-              <p className="text-xs text-muted-foreground">{desvioPadraoAnoPassado.toFixed(2)} from last month</p>
+              <p className="text-xs text-muted-foreground">{desvioPadraoAnoPassado.toFixed(2)} ano de 2017</p>
             </CardContent>
           </Card>
         </div>
