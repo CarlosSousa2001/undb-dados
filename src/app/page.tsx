@@ -27,8 +27,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { DollarSign, Users } from "lucide-react";
 
 
-
-
 interface DataProps {
   name: string;
   thisYear: number;
@@ -209,9 +207,8 @@ export default function Home() {
         <h1 className="text-white text-xl font-black">SOFTWARE DE COMPARAÇÃO DE GANHOS ANUAIS</h1>
       </div>
 
-      <form onSubmit={handleSubmit(handleSubmitData)} className="flex justify-between  gap-4  rounded-md p-6">
+      <form onSubmit={handleSubmit(handleSubmitData)} className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  gap-4  rounded-md p-6">
 
-        <div className="flex items-center gap-4">
 
           <div className="flex flex-col gap-2">
             <Label className="text-white">Selecione o mês</Label>
@@ -221,7 +218,7 @@ export default function Home() {
               render={({ field }) => {
                 return (
                   <Select onValueChange={field.onChange}>
-                    <SelectTrigger className="w-[200px] bg-black text-white">
+                    <SelectTrigger className=" bg-black text-white">
                       <SelectValue placeholder="selecione o mês" />
                     </SelectTrigger>
                     <SelectContent className="bg-black text-white">
@@ -249,9 +246,9 @@ export default function Home() {
             <Input className="bg-black text-white" type="number" placeholder="Digite o gasto do mês" {...register("thisYearMoney")} />
           </div>
 
-        </div>
+   
 
-        <div className="flex items-center gap-4">
+ 
 
           <div className="flex flex-col gap-2 ">
             <Label className="text-white">Ano que deseja comparar</Label>
@@ -266,13 +263,13 @@ export default function Home() {
 
           <Button variant={"outline"} className="mt-[22px] bg-black text-white hover:bg-white hover:text-black">Inserir</Button>
 
-        </div>
+        
 
       </form>
 
       <div className="grid grid-cols-1  gap-4  rounded-md p-6">
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           <Card className="bg-transparent text-white">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -329,7 +326,7 @@ export default function Home() {
             <CardTitle>Gasto por mês</CardTitle>
             <div className="flex items-center gap-2 w-full justify-between">
               <CardDescription>O gráfico mostra o valor do gasto atual comparado com o ano passado</CardDescription>
-              <div>
+              <div className="max-md:hidden">
                 <p className="text-muted-foreground">Gasto total do ano atual: {valorTotalAnoAtual.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
                 <p className="text-muted-foreground">Gasto total do ano passado: {valorTotalAnoPassado.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
               </div>
