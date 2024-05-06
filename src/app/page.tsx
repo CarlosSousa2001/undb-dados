@@ -46,15 +46,15 @@ type CreateData = z.infer<typeof CreateDataSchema>
 export default function Home() {
 
   const [data, setData] = useState<DataProps[]>([
-    { name: 'Janeiro', thisYear: 4000, lastYear: 3000 },
-    { name: 'Fevereiro', thisYear: 3000, lastYear: 2000 },
-    { name: 'Março', thisYear: 2000, lastYear: 1500 },
-    { name: 'Abril', thisYear: 2780, lastYear: 1890 },
-    { name: 'Maio', thisYear: 1890, lastYear: 1230 },
-    { name: 'Junho', thisYear: 2390, lastYear: 2100 },
-    { name: 'Julho', thisYear: 3490, lastYear: 1500 },
-    { name: 'Agosto', thisYear: 3490, lastYear: 2500 },
-    { name: 'Setembro', thisYear: 3490, lastYear: 2200 },
+    { name: 'Janeiro', thisYear: 400, lastYear: 300},
+    { name: 'Fevereiro', thisYear: 300, lastYear: 200 },
+    { name: 'Março', thisYear: 200, lastYear: 150 },
+    { name: 'Abril', thisYear: 278, lastYear: 189 },
+    { name: 'Maio', thisYear: 160, lastYear: 123 },
+    { name: 'Junho', thisYear: 220, lastYear: 210 },
+    { name: 'Julho', thisYear: 360, lastYear: 150 },
+    { name: 'Agosto', thisYear: 200, lastYear: 180 },
+    { name: 'Setembro', thisYear: 270, lastYear: 220 },
   ])
 
   const [valorTotalAnoAtual, setValorTotalAnoAtual] = useState(0)
